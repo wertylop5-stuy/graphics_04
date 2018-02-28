@@ -1,7 +1,11 @@
 #ifndef PARSER_H
 #define PARSER_H
 
+#include<string.h>
+
 #include"draw.h"
+#include"matrix.h"
+#include"output.h"
 
 void parse_instructions(char *filename, struct Matrix *t,
 			struct Matrix *e, Frame f);

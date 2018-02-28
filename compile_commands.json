@@ -1,0 +1,27 @@
+[
+    {
+        "command": "cc -c include/draw.h include/output.h include/dimen.h /home/stanley/Documents/Github/graphics_04/draw.c",
+        "directory": "/home/stanley/Documents/Github/graphics_04",
+        "file": "/home/stanley/Documents/Github/graphics_04/draw.c"
+    },
+    {
+        "command": "cc -c include/output.h include/draw.h /home/stanley/Documents/Github/graphics_04/output.c",
+        "directory": "/home/stanley/Documents/Github/graphics_04",
+        "file": "/home/stanley/Documents/Github/graphics_04/output.c"
+    },
+    {
+        "command": "cc -c include/matrix.h /home/stanley/Documents/Github/graphics_04/matrix.c",
+        "directory": "/home/stanley/Documents/Github/graphics_04",
+        "file": "/home/stanley/Documents/Github/graphics_04/matrix.c"
+    },
+    {
+        "command": "cc -c include/parser.h /home/stanley/Documents/Github/graphics_04/parser.c",
+        "directory": "/home/stanley/Documents/Github/graphics_04",
+        "file": "/home/stanley/Documents/Github/graphics_04/parser.c"
+    },
+    {
+        "command": "cc -c include/draw.h include/output.h include/matrix.h /home/stanley/Documents/Github/graphics_04/main.c",
+        "directory": "/home/stanley/Documents/Github/graphics_04",
+        "file": "/home/stanley/Documents/Github/graphics_04/main.c"
+    }
+]
