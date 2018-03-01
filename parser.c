@@ -6,22 +6,36 @@ void parse_instructions(char *filename, struct Matrix *t,
 	if (!file) return;
 	
 	char line[256];
+	float x1, y1, z1, x2, y2, z2;
+	char axis;
 	
 	while (fgets(line, sizeof(line), file) != 0) {
 		if (!strncmp(line, "line", strlen(line))) {
-			
+			fgets(line, sizeof(line), file);
+			sscanf(line, "%f %f %f %f %f %f",
+				&x1, &y1, &z1, &x2, &y2, &z2);
+			push_edge(e, x1, y1, z1, x2, y2, z2);
 		}
 		else if (!strncmp(line, "ident", strlen(line))) {
 			ident(t);
 		}
 		else if (!strncmp(line, "scale", strlen(line))) {
-			
+			fgets(line, sizeof(line), file);
+			sscanf(line, "%f %f %f",
+				&x1, &y1, &z1);
+			scale(t, x1, y1, z1);
 		}
 		else if (!strncmp(line, "translate", strlen(line))) {
-			
+			fgets(line, sizeof(line), file);
+			sscanf(line, "%f %f %f",
+				&x1, &y1, &z1);
+			move(t, x1, y1, z1);
 		}
 		else if (!strncmp(line, "rotate", strlen(line))) {
-			
+			fgets(line, sizeof(line), file);
+			sscanf(line, "%c %f",
+				&axis, &z1);
+			rotate(t, axis, z1);
 		}
 		else if (!strncmp(line, "apply", strlen(line))) {
 			matrix_mult(t, e);

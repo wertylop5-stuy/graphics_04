@@ -80,3 +80,16 @@ void resize(struct Matrix *m) {
 	m->cols *= 2;
 }
 
+void scale(struct Matrix *t, float a, float b, float c) {
+	
+}
+
+void move(struct Matrix *t, float a, float b, float c) {
+	
+}
+
+void rotate(struct Matrix *t, char axis, float deg) {
+	
+}
+
+

@@ -28,4 +28,9 @@ void free_matrix(struct Matrix *m);
 //doubles the amount of columns
 void resize(struct Matrix *m);
 
+//transformations
+void scale(struct Matrix *t, float a, float b, float c);
+void move(struct Matrix *t, float a, float b, float c);
+void rotate(struct Matrix *t, char axis, float deg);	//0: x, 1: y, 2: z
+
 #endif
