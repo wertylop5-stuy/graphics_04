@@ -81,11 +81,13 @@ void resize(struct Matrix *m) {
 }
 
 void scale(struct Matrix *t, float a, float b, float c) {
-	
+	t->m[0][0] *= a;
+	t->m[1][1] *= b;
+	t->m[2][2] *= c;
 }
 
 void move(struct Matrix *t, float a, float b, float c) {
-	
+	t->m[0][3] 
 }
 
 void rotate(struct Matrix *t, char axis, float deg) {
