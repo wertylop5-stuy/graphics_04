@@ -4,9 +4,11 @@
 #include"include/parser.h"
 
 int main() {
-	struct Matrix edges, trans;
+	struct Matrix *edges = new_matrix(4, 1);
+	struct Matrix *trans = new_matrix(4, 4);
 	Frame f;
-	parse_instructions("script", &trans, &edges, f);
+	memset(f, 0, sizeof(f));
+	parse_instructions("script", trans, edges, f);
 	
 	return 0;
 }

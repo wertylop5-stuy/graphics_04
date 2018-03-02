@@ -3,6 +3,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
+#include<string.h>
 
 struct Matrix {
 	float **m;
@@ -24,6 +26,8 @@ void ident(struct Matrix *m);
 void matrix_mult(struct Matrix const *a, struct Matrix *b);
 
 void free_matrix(struct Matrix *m);
+
+struct Matrix* copy_matrix(struct Matrix *m);
 
 //doubles the amount of columns
 void resize(struct Matrix *m);

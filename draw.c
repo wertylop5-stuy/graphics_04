@@ -166,6 +166,7 @@ void push_point(struct Matrix *m, float x, float y, float z) {
 	m->m[0][m->back] = x;
 	m->m[1][m->back] = y;
 	m->m[2][m->back] = z;
+	m->m[3][m->back] = 1.0f;
 	m->back++;
 }
 

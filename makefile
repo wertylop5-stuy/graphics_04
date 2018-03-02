@@ -1,9 +1,10 @@
 OBJS = draw.o output.o matrix.o parser.o main.o
 OUTPUT = picture.ppm
 EXEC = exec
+MATH_LIB = -lm
 
 all: $(OBJS)
-	gcc -o $(EXEC) $(OBJS)
+	gcc -o $(EXEC) $(OBJS) $(MATH_LIB)
 	./$(EXEC)
 
 main.o: main.c include/draw.h include/output.h include/matrix.h
