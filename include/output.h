@@ -17,6 +17,6 @@ void write_to_file(Frame p);
 
 void display(Frame f);
 
-void save_png(Frame f);
+void save_png(Frame f, char *name);
 
 #endif

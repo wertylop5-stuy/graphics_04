@@ -6,6 +6,7 @@ void parse_instructions(char *filename, struct Matrix *t,
 	if (!file) return;
 	
 	char line[256];
+	char name[128];
 	float x1, y1, z1, x2, y2, z2;
 	char axis;
 	
@@ -48,8 +49,10 @@ void parse_instructions(char *filename, struct Matrix *t,
 			display(f);
 		}
 		else if (!strncmp(line, "save", strlen(line)-1)) {
+			fgets(line, sizeof(line), file);
+			sscanf(line, "%s", name);
 			write_to_file(f);
-			save_png(f);
+			save_png(f, name);
 		}
 		else if (!strncmp(line, "quit", strlen(line)-1)) {
 			break;

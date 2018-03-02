@@ -35,9 +35,12 @@ void display(Frame f) {
 	pclose(file);
 }
 
-void save_png(Frame f) {
+void save_png(Frame f, char *name) {
+	char temp[128];
+	sprintf(temp, "convert - %s", name);
+
 	FILE *file;
-	file = popen("convert - picture.png", "w");
+	file = popen(temp, "w");
 	
 	fprintf(file, "P3\n%d %d\n%d\n", IMG_WIDTH, IMG_HEIGHT, MAX_COLOR);
 	

@@ -9,6 +9,9 @@ int main() {
 	Frame f;
 	memset(f, 0, sizeof(f));
 	parse_instructions("script", trans, edges, f);
+
+	free_matrix(edges);
+	free_matrix(trans);
 	
 	return 0;
 }
