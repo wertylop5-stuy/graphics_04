@@ -5,7 +5,7 @@ MATH_LIB = -lm
 
 all: $(OBJS)
 	gcc -o $(EXEC) $(OBJS) $(MATH_LIB)
-	./$(EXEC)
+	./$(EXEC) $(SCRIPT)
 
 main.o: main.c include/draw.h include/output.h include/matrix.h
 	gcc $(DBG) -Wall -c main.c include/draw.h include/output.h include/matrix.h
